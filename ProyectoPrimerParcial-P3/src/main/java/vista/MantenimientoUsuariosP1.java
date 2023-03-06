@@ -4,19 +4,39 @@
  */
 package vista;
 
+import controlador.clsUsuarioP1;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import java.io.File;
+import java.util.HashSet;
+import java.util.Set;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
  */
 public class MantenimientoUsuariosP1 extends javax.swing.JFrame {
-
+public void llenadoDeTablas() {
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.addColumn("ID");
+        modelo.addColumn("nombre");
+        modelo.addColumn("Contraseña");
+        clsUsuarioP1 usuario = new clsUsuarioP1();
+        //VendedorDAO vendedorDAO = new VendedorDAO();
+        List<clsUsuarioP1> listaUsuarios = usuario.getListadoUsuarios();
+        tablaUsuarios.setModel(modelo);
+        String[] dato = new String[3];
+        for (int i = 0; i < listaUsuarios.size(); i++) {
+            dato[0] = Integer.toString(listaUsuarios.get(i).getIdUsuario());
+            dato[1] = listaUsuarios.get(i).getNombreUsuario();
+            dato[2] = listaUsuarios.get(i).getContrasenaUsuario();
+            modelo.addRow(dato);
+        }       
+    }
     /**
      * Creates new form MantenimientoUsuariosP1
      */
-    public MantenimientoUsuariosP1() {
-        initComponents();
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -258,7 +278,7 @@ public class MantenimientoUsuariosP1 extends javax.swing.JFrame {
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
         int registrosBorrados=0;
-        clsUsuario usuario = new clsUsuario();
+        clsUsuarioP1 usuario = new clsUsuarioP1();
         usuario.setIdUsuario(Integer.parseInt(txtbuscado.getText()));
         registrosBorrados=usuario.setBorrarUsuario(usuario);
         JOptionPane.showMessageDialog(null, "Registro Borrado\n",
@@ -268,7 +288,7 @@ public class MantenimientoUsuariosP1 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        clsUsuario usuario = new clsUsuario();
+        clsUsuarioP1 usuario = new clsUsuarioP1();
         usuario.setNombreUsuario(txtNombre.getText());
         usuario.setContrasenaUsuario(txtContrasena.getText());
         usuario.setIngresarUsuario(usuario);
@@ -280,7 +300,7 @@ public class MantenimientoUsuariosP1 extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
-        clsUsuario usuario = new clsUsuario();
+        clsUsuarioP1 usuario = new clsUsuarioP1();
         //usuario.setNombreUsuario(txtbuscado.getText());
         usuario.setIdUsuario(Integer.parseInt(txtbuscado.getText()));
         usuario = usuario.getBuscarInformacionUsuarioPorId(usuario);
@@ -291,7 +311,7 @@ public class MantenimientoUsuariosP1 extends javax.swing.JFrame {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         //        // TODO add your handling code here:
-        clsUsuario usuario = new clsUsuario();
+        clsUsuarioP1 usuario = new clsUsuarioP1();
         usuario.setIdUsuario(Integer.parseInt(txtbuscado.getText()));
         usuario.setNombreUsuario(txtNombre.getText());
         usuario.setContrasenaUsuario(txtContrasena.getText());
@@ -329,7 +349,24 @@ public class MantenimientoUsuariosP1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         llenadoDeTablas();
     }//GEN-LAST:event_btnActualizarActionPerformed
-
+public void limpiarTextos()
+    {
+        txtNombre.setText("");
+        txtContrasena.setText("");
+        txtbuscado.setText("");
+    }
+    public void habilitarBotones()
+    {
+        btnRegistrar.setEnabled(true);
+        btnModificar.setEnabled(true);
+        btnEliminar.setEnabled(true);
+    }
+    public void desHabilitarBotones()
+    {
+        btnRegistrar.setEnabled(false);
+        btnModificar.setEnabled(false);
+        btnEliminar.setEnabled(false);
+    }    
     /**
      * @param args the command line arguments
      */

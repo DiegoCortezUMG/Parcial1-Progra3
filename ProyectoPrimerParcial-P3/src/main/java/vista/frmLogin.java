@@ -5,7 +5,7 @@
  */
 package vista;
 
-import controlador.clsUsuario;
+import controlador.clsUsuarioP1;
 import java.awt.HeadlessException;
 
 import javax.swing.JOptionPane;
@@ -131,7 +131,7 @@ public class frmLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "NO PUEDEN HABER CAMPOS VACIOS", "ERROR", JOptionPane.                  ERROR_MESSAGE);
         } else {
             try {
-                clsUsuario usuario = new clsUsuario();
+                clsUsuarioP1 usuario = new clsUsuarioP1();
           
                 usuario.setNombreUsuario(txtUsuario.getText().trim());
                 // Recuperación de información a través de otro objeto
