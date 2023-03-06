@@ -11,7 +11,7 @@ import java.sql.*;
  * @author Usuario
  */
 public class clsConexionP1 {
-    private static final String JDBC_URL = "jdbc:mysql://localhost/bdprimerparcial-p3?useSSL=false&serverTimezone=UTC";
+    private static final String JDBC_URL = "jdbc:mysql://localhost/siu?useSSL=false&serverTimezone=UTC";
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASS = "12345";
    
