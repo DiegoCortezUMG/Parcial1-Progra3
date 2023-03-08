@@ -1,0 +1,35 @@
+commit 18bdfc9efb5bddd064321d8a6e7d5923ee73900c
+Author: DiegoCortezUMG <98113773+DiegoCortezUMG@users.noreply.github.com>
+Date:   Mon Mar 6 12:56:44 2023 -0600
+
+    Ya hechos mantenimientos
+
+commit 29371be0357cd3286001489277c661ff984cb26a
+Author: DiegoCortezUMG <98113773+DiegoCortezUMG@users.noreply.github.com>
+Date:   Mon Mar 6 12:33:42 2023 -0600
+
+    hechos ya los contenedores de maestros
+
+commit e53090721eb59ae144d3bb5d130889eebc2c063d
+Author: DiegoCortezUMG <98113773+DiegoCortezUMG@users.noreply.github.com>
+Date:   Mon Mar 6 11:40:44 2023 -0600
+
+    listos ajuste principales, empezando contenido de examen
+
+commit cdef9e49e1139b57304e5742e76c3922b4d0334e
+Author: DiegoCortezUMG <98113773+DiegoCortezUMG@users.noreply.github.com>
+Date:   Mon Mar 6 10:12:21 2023 -0600
+
+    Añadidas la clase y dao del usuario
+
+commit 511d80e18ed2bf3f0d4f22cb70d43958334fdf33
+Author: DiegoCortezUMG <98113773+DiegoCortezUMG@users.noreply.github.com>
+Date:   Sun Mar 5 22:38:16 2023 -0600
+
+    creación de la base de datos, login, MDI y clsUsuario, esto es trabajo en preparación al examen
+
+commit ecedac9823959bc91915090dbfdd004fad059eda
+Author: DiegoCortezUMG <98113773+DiegoCortezUMG@users.noreply.github.com>
+Date:   Sun Mar 5 22:24:48 2023 -0600
+
+    configuración inical

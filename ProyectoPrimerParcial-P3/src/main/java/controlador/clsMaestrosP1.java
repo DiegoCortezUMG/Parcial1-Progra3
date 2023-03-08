@@ -94,7 +94,7 @@ public class clsMaestrosP1 {
     public clsMaestrosP1 getBuscarInformacionMaestroPorNombre(clsMaestrosP1 maestro)
     {
         daoMaestrosP1 daomaestro = new daoMaestrosP1();
-        return daoMaestrosP1.consultaMaestroPorNombre(maestro);
+        return daomaestro.consultaMaestrosPorNombre(maestro);
     }
     public daoMaestrosP1 getBuscarInformacionMeastrosPorId(daoMaestrosP1 maestro)
     {
@@ -104,7 +104,7 @@ public class clsMaestrosP1 {
     public List<clsMaestrosP1> getListadoMaestros()
     {
         daoMaestrosP1 daomaestro = new daoMaestrosP1();
-        List<clsMaestrosP1> listadoMaestros = daoMaestroP1.consultaMaestros();
+        List<clsMaestrosP1> listadoMaestros = daomaestro.consultaMaestros();
         return listadoMaestros;
     }
     public int setBorrarMaestro(clsMaestrosP1 maestro)
@@ -114,7 +114,7 @@ public class clsMaestrosP1 {
     }          
     public int setIngresarMaestro(clsMaestrosP1 maestro)
     {
-        daoMaestrosP1 daoMaestro = new daoMaestrosP1();
+        daoMaestrosP1 daomaestros = new daoMaestrosP1();
         return daomaestros.ingresaMaestros(maestro);
     }              
     public int setModificarMaestro(clsMaestrosP1 maestro)
